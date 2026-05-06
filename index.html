@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRELUXE — Premium Fashion Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  <span>🚀 ส่งฟรีเมื่อซื้อครบ ฿1,500 | ของแท้ 100% | LINE: @preluxe</span>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <div class="logo"><a href="index.html">PRELUXE</a></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="listing.html">Shop</a>
+      <a href="listing.html">Clothing</a>
+      <a href="listing.html">Accessories</a>
+      <a href="listing.html">Sale</a>
+    </nav>
+    <div class="header-icons">
+      <button class="icon-btn" onclick="toggleSearch()">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" onclick="window.location='checkout.html'">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count">2</span>
+      </button>
+      <button class="menu-toggle" onclick="toggleMobileMenu()">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="listing.html">Shop All</a>
+    <a href="listing.html">Clothing</a>
+    <a href="listing.html">Accessories</a>
+    <a href="listing.html">Sale</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-sub">NEW COLLECTION 2025</p>
+      <h1 class="hero-title">ขายได้แม้<br><span>ของหมดสต็อก</span></h1>
+      <p class="hero-desc">ระบบ Pre-order อัตโนมัติ · รับ PromptPay ทันที · จัดการ stock real-time</p>
+      <div class="hero-btns">
+        <a href="listing.html" class="btn btn-white">ช้อปเลย →</a>
+        <a href="listing.html" class="btn btn-outline-white">ดูคอลเลกชัน</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<section class="trust-bar">
+  <div class="trust-grid">
+    <div class="trust-item">
+      <span class="trust-icon">✅</span>
+      <div>
+        <strong>ของแท้ 100%</strong>
+        <p>รับประกันทุกชิ้น</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">⚡</span>
+      <div>
+        <strong>ส่งใน 24 ชม.</strong>
+        <p>Kerry Express ทั่วไทย</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">🔒</span>
+      <div>
+        <strong>ชำระปลอดภัย</strong>
+        <p>PromptPay · Visa · MC</p>
+      </div>
+    </div>
+    <div class="trust-item">
+      <span class="trust-icon">⭐</span>
+      <div>
+        <strong>4.8/5 ดาว</strong>
+        <p>จาก 2,847 รีวิว</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURE HIGHLIGHTS -->
+<section class="features-section">
+  <div class="container">
+    <h2 class="section-title">ระบบที่ทำงานแทนคุณ <span>ตลอด 24 ชั่วโมง</span></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">💳</div>
+        <h3>รับเงินทันที</h3>
+        <p>ลูกค้าสแกน PromptPay QR เงินเข้าบัญชีภายใน 5 วินาที ไม่ต้องรอโอน ไม่ต้องเช็ค slip</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📦</div>
+        <h3>ขายได้แม้ของหมด</h3>
+        <p>ระบบ Pre-order อัตโนมัติ ลูกค้าจองล่วงหน้าได้ทันที ไม่เสียยอดขายแม้แต่ชิ้นเดียว</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>จัดการ Stock Real-time</h3>
+        <p>อัพเดตสต็อกจาก dashboard เดียว แจ้งเตือนเมื่อสินค้าใกล้หมด ดูได้จากมือถือทุกที่</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLASH SALE -->
+<section class="flash-sale-banner">
+  <div class="container flash-inner">
+    <div class="flash-left">
+      <span class="flash-label">⏱ FLASH SALE</span>
+      <span class="flash-text">วันนี้เท่านั้น</span>
+    </div>
+    <div class="flash-timer" id="flashTimer">
+      <div class="timer-box"><span id="th">02</span><small>ชม.</small></div>
+      <div class="timer-sep">:</div>
+      <div class="timer-box"><span id="tm">14</span><small>นาที</small></div>
+      <div class="timer-sep">:</div>
+      <div class="timer-box"><span id="ts">38</span><small>วิ</small></div>
+    </div>
+    <a href="listing.html" class="btn btn-black-sm">ช้อปเลย</a>
+  </div>
+</section>
+
+<!-- BEST SELLERS -->
+<section class="best-sellers">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Best Sellers <span>สินค้าขายดี</span></h2>
+      <a href="listing.html" class="see-all">ดูทั้งหมด →</a>
+    </div>
+    <div class="product-grid">
+
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=600&q=80" alt="T-Shirt">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=600&q=80" alt="T-Shirt alt">
+          <div class="card-badges">
+            <span class="badge badge-fire">🔥 ขายดี</span>
+            <span class="badge badge-stock">เหลือ 3!</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-btn" onclick="event.stopPropagation();addToCart()">+ ตะกร้า</button>
+            <button class="card-btn-wish">♡</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-colors"><span class="color-dot" style="background:#111"></span><span class="color-dot" style="background:#fff;border:1px solid #ddd"></span><span class="color-dot" style="background:#8B4513"></span></div>
+          <h3>Human Made T-Shirt</h3>
+          <div class="card-price"><s>฿1,648</s> <strong>฿1,236</strong> <span class="disc-badge">-25%</span></div>
+          <div class="card-rating">⭐⭐⭐⭐⭐ <small>(128)</small></div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80" alt="Hoodie">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80" alt="Hoodie alt">
+          <div class="card-badges">
+            <span class="badge badge-new">🆕 ใหม่</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-btn" onclick="event.stopPropagation();addToCart()">+ ตะกร้า</button>
+            <button class="card-btn-wish">♡</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-colors"><span class="color-dot" style="background:#111"></span><span class="color-dot" style="background:#555"></span></div>
+          <h3>Human Made Hoodie</h3>
+          <div class="card-price"><s>฿2,800</s> <strong>฿1,960</strong> <span class="disc-badge">-30%</span></div>
+          <div class="card-rating">⭐⭐⭐⭐⭐ <small>(94)</small></div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80" alt="Pants">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80" alt="Pants alt">
+          <div class="card-badges">
+            <span class="badge badge-preorder">📦 Pre-order</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-btn" onclick="event.stopPropagation();addToCart()">+ จอง</button>
+            <button class="card-btn-wish">♡</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-colors"><span class="color-dot" style="background:#111"></span><span class="color-dot" style="background:#8B7355"></span></div>
+          <h3>Human Made Wide Pants</h3>
+          <div class="card-price"><s>฿3,200</s> <strong>฿2,240</strong> <span class="disc-badge">-30%</span></div>
+          <div class="card-rating">⭐⭐⭐⭐⭐ <small>(67)</small></div>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600&q=80" alt="Jacket">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1594938298603-c8148c4b4c06?w=600&q=80" alt="Jacket alt">
+          <div class="card-badges">
+            <span class="badge badge-fire">🔥 ขายดี</span>
+            <span class="badge badge-sale">-57%</span>
+          </div>
+          <div class="card-actions">
+            <button class="card-btn" onclick="event.stopPropagation();addToCart()">+ ตะกร้า</button>
+            <button class="card-btn-wish">♡</button>
+          </div>
+        </div>
+        <div class="card-info">
+          <div class="card-colors"><span class="color-dot" style="background:#111"></span><span class="color-dot" style="background:#2F4F4F"></span><span class="color-dot" style="background:#8B0000"></span></div>
+          <h3>Human Made Jacket</h3>
+          <div class="card-price"><s>฿5,500</s> <strong>฿2,365</strong> <span class="disc-badge">-57%</span></div>
+          <div class="card-rating">⭐⭐⭐⭐⭐ <small>(203)</small></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="reviews-section">
+  <div class="container">
+    <h2 class="section-title">เสียงจากลูกค้าจริง <span>2,847 รีวิว</span></h2>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p>"สินค้าสวยมาก ของแท้ชัวร์เลย สั่งตอนเที่ยงคืน ได้ของวันรุ่งขึ้นบ่ายๆ"</p>
+        <div class="reviewer">— ปอ, กรุงเทพฯ · 2 วันที่แล้ว</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p>"PromptPay จ่ายง่ายมาก สแกนปุ๊บ เสร็จปั๊บ ระบบดีมากกกก"</p>
+        <div class="reviewer">— แนน, เชียงใหม่ · 5 วันที่แล้ว</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">⭐⭐⭐⭐⭐</div>
+        <p>"Pre-order ได้ด้วย เยี่ยมเลย สินค้ามาตรงเวลา แพ็กดีมาก จะกลับมาซื้ออีก"</p>
+        <div class="reviewer">— มิน, ขอนแก่น · 1 สัปดาห์ที่แล้ว</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINE CTA -->
+<section class="line-cta">
+  <div class="container line-cta-inner">
+    <div class="line-icon">
+      <svg width="40" height="40" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="#06C755"/><path d="M20 8C13.373 8 8 12.477 8 18c0 3.09 1.676 5.845 4.32 7.672-.19.698-.696 2.556-.8 2.953-.126.491.18.485.38.353.156-.103 2.478-1.663 3.486-2.337.826.12 1.68.183 2.614.183 6.627 0 12-4.477 12-10S26.627 8 20 8z" fill="white"/></svg>
+    </div>
+    <div class="line-text">
+      <h3>มีคำถาม? ทักหาเราได้เลย</h3>
+      <p>ตอบภายใน 5 นาที · ทุกวัน 9:00–21:00</p>
+    </div>
+    <a href="#" class="btn btn-line">ทัก LINE @preluxe</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">PRELUXE</div>
+      <p>Premium Japanese streetwear<br>ของแท้ · ราคาดี · ส่งเร็ว</p>
+      <div class="payment-icons">
+        <span class="pay-icon">PromptPay</span>
+        <span class="pay-icon">VISA</span>
+        <span class="pay-icon">MC</span>
+        <span class="pay-icon">JCB</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Shop</h4>
+      <a href="listing.html">Clothing</a>
+      <a href="listing.html">Accessories</a>
+      <a href="listing.html">Sale</a>
+    </div>
+    <div class="footer-links">
+      <h4>Help</h4>
+      <a href="#">FAQ</a>
+      <a href="#">ติดต่อเรา</a>
+      <a href="#">นโยบายการคืนสินค้า</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Human Made Thailand. All rights reserved.</div>
+</footer>
+
+<!-- TOAST NOTIFICATION -->
+<div class="toast" id="toast">✅ เพิ่มลงตะกร้าแล้ว!</div>
+
+<script src="app.js"></script>
+</body>
+</html>

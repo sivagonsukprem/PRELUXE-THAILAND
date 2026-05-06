@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ชำระเงิน — PRELUXE THAILAND</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER (minimal checkout) -->
+<header class="header" style="border-bottom:1px solid #e0e0e0;">
+  <div class="header-inner">
+    <div class="logo"><a href="index.html">PRELUXE</a></div>
+    <div style="font-size:13px;color:#888;display:flex;align-items:center;gap:6px;">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      ชำระเงินอย่างปลอดภัย
+    </div>
+    <a href="listing.html" style="font-size:13px;color:#888;">← กลับช้อปต่อ</a>
+  </div>
+</header>
+
+<!-- STEP 1: INFORMATION -->
+<div class="container checkout-page" id="step1Page">
+
+  <!-- Progress -->
+  <div class="checkout-progress">
+    <div class="progress-step">
+      <div class="step-circle active" id="circle1">1</div>
+      <span class="step-label active">ข้อมูลจัดส่ง</span>
+    </div>
+    <div class="progress-line" id="line1"></div>
+    <div class="progress-step">
+      <div class="step-circle" id="circle2">2</div>
+      <span class="step-label" id="label2">ชำระเงิน</span>
+    </div>
+    <div class="progress-line" id="line2"></div>
+    <div class="progress-step">
+      <div class="step-circle" id="circle3">✓</div>
+      <span class="step-label" id="label3">เสร็จสิ้น</span>
+    </div>
+  </div>
+
+  <div class="checkout-layout">
+
+    <!-- FORM -->
+    <div class="checkout-form-section">
+      <h2 class="checkout-section-title">ข้อมูลผู้รับสินค้า</h2>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>ชื่อ *</label>
+          <input type="text" placeholder="ชื่อ" id="fname">
+        </div>
+        <div class="form-group">
+          <label>นามสกุล *</label>
+          <input type="text" placeholder="นามสกุล" id="lname">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>เบอร์โทรศัพท์ *</label>
+        <input type="tel" placeholder="0xx-xxx-xxxx" id="phone">
+      </div>
+
+      <div class="form-group">
+        <label>อีเมล (สำหรับรับใบเสร็จ)</label>
+        <input type="email" placeholder="example@email.com" id="email">
+      </div>
+
+      <div class="form-group">
+        <label>ที่อยู่ *</label>
+        <input type="text" placeholder="บ้านเลขที่ ซอย ถนน" id="address">
+      </div>
+
+      <div class="form-3col">
+        <div class="form-group">
+          <label>จังหวัด</label>
+          <select id="province">
+            <option value="">เลือกจังหวัด</option>
+            <option selected>กรุงเทพมหานคร</option>
+            <option>เชียงใหม่</option>
+            <option>ขอนแก่น</option>
+            <option>ภูเก็ต</option>
+            <option>นนทบุรี</option>
+            <option>สมุทรปราการ</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>อำเภอ/เขต</label>
+          <select>
+            <option selected>วังทองหลาง</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>รหัสไปรษณีย์</label>
+          <input type="text" placeholder="10xxx" maxlength="5" id="postcode">
+        </div>
+      </div>
+
+      <h2 class="checkout-section-title" style="margin-top:32px;">เลือกวิธีจัดส่ง</h2>
+
+      <div class="shipping-options">
+        <label class="shipping-option selected" onclick="selectShipping(this,'50')">
+          <input type="radio" name="shipping" checked>
+          <div class="shipping-info">
+            <strong>Kerry Express</strong>
+            <small>ได้รับสินค้าใน 1-2 วัน</small>
+          </div>
+          <span class="shipping-price">฿50</span>
+        </label>
+        <label class="shipping-option" onclick="selectShipping(this,'80')">
+          <input type="radio" name="shipping">
+          <div class="shipping-info">
+            <strong>Thailand Post EMS</strong>
+            <small>ได้รับสินค้าใน 2-3 วัน</small>
+          </div>
+          <span class="shipping-price">฿80</span>
+        </label>
+        <label class="shipping-option" onclick="selectShipping(this,'0')">
+          <input type="radio" name="shipping">
+          <div class="shipping-info">
+            <strong>🎉 ฟรีจัดส่ง (ครบ ฿1,500)</strong>
+            <small>Kerry Express · ได้รับสินค้าใน 1-2 วัน</small>
+          </div>
+          <span class="shipping-price" style="color:#2e7d32;font-weight:700;">ฟรี</span>
+        </label>
+      </div>
+
+      <button class="btn btn-black" onclick="goToStep2()">
+        ไปชำระเงิน →
+      </button>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary" id="orderSummary">
+      <h3>สรุปคำสั่งซื้อ</h3>
+
+      <div class="order-item">
+        <div class="order-item-img">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&q=80" alt="">
+          <span class="order-item-badge">1</span>
+        </div>
+        <div class="order-item-info">
+          <div class="order-item-name">Human Made Graphic T-Shirt</div>
+          <div class="order-item-variant">สี: Black · ขนาด: M</div>
+        </div>
+        <span class="order-item-price">฿1,236</span>
+      </div>
+
+      <div class="order-item">
+        <div class="order-item-img">
+          <img src="https://images.unsplash.com/photo-1618517351616-38fb9c5210c6?w=200&q=80" alt="">
+          <span class="order-item-badge">1</span>
+        </div>
+        <div class="order-item-info">
+          <div class="order-item-name">Human Made 6-Panel Cap</div>
+          <div class="order-item-variant">สี: Black · Free Size</div>
+        </div>
+        <span class="order-item-price">฿840</span>
+      </div>
+
+      <div class="coupon-row">
+        <input class="coupon-input" type="text" placeholder="รหัสคูปอง" id="couponInput">
+        <button class="coupon-btn" onclick="applyCoupon()">ใช้</button>
+      </div>
+      <div id="couponMsg" style="font-size:12px;margin-top:-8px;margin-bottom:8px;"></div>
+
+      <div class="order-totals">
+        <div class="order-row"><span>ยอดรวมสินค้า</span><span>฿2,076</span></div>
+        <div class="order-row"><span>ส่วนลด</span><span style="color:#2e7d32;">-฿624</span></div>
+        <div class="order-row" id="shippingRow"><span>ค่าจัดส่ง</span><span id="shippingCost">฿50</span></div>
+        <div class="order-row total"><span>รวมทั้งหมด</span><span id="totalPrice">฿1,326</span></div>
+      </div>
+
+      <div class="secure-badge">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        SSL ปลอดภัย · ข้อมูลถูกเข้ารหัสทั้งหมด
+      </div>
+
+      <div style="display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+        <span class="pay-badge">PromptPay</span>
+        <span class="pay-badge">VISA</span>
+        <span class="pay-badge">MC</span>
+        <span class="pay-badge">JCB</span>
+        <span class="pay-badge">TrueMoney</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- STEP 2: PAYMENT -->
+<div class="container checkout-page" id="step2Page" style="display:none;">
+
+  <div class="checkout-progress">
+    <div class="progress-step">
+      <div class="step-circle done">✓</div>
+      <span class="step-label" style="color:#2e7d32;">ข้อมูลจัดส่ง</span>
+    </div>
+    <div class="progress-line done"></div>
+    <div class="progress-step">
+      <div class="step-circle active">2</div>
+      <span class="step-label active">ชำระเงิน</span>
+    </div>
+    <div class="progress-line"></div>
+    <div class="progress-step">
+      <div class="step-circle">✓</div>
+      <span class="step-label">เสร็จสิ้น</span>
+    </div>
+  </div>
+
+  <div class="checkout-layout">
+    <div class="checkout-form-section">
+      <h2 class="checkout-section-title">เลือกวิธีชำระเงิน</h2>
+
+      <div class="payment-tabs">
+
+        <!-- PromptPay -->
+        <div class="payment-tab selected" id="tabPromptpay">
+          <div class="payment-tab-header selected" onclick="selectPayment('promptpay')">
+            <input type="radio" name="payment" checked>
+            <span class="payment-tab-label">
+              <strong>PromptPay</strong> — สแกน QR Code
+            </span>
+            <div class="payment-logos">
+              <span class="p-logo" style="background:#e8f5e9;color:#2e7d32;">PromptPay</span>
+            </div>
+          </div>
+          <div class="payment-tab-body">
+            <div class="qr-container">
+              <!-- QR Code SVG (mock pattern) -->
+              <div class="qr-code">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                  <!-- QR Corner squares -->
+                  <rect x="5" y="5" width="28" height="28" fill="none" stroke="#000" stroke-width="3"/>
+                  <rect x="10" y="10" width="18" height="18" fill="#000"/>
+                  <rect x="67" y="5" width="28" height="28" fill="none" stroke="#000" stroke-width="3"/>
+                  <rect x="72" y="10" width="18" height="18" fill="#000"/>
+                  <rect x="5" y="67" width="28" height="28" fill="none" stroke="#000" stroke-width="3"/>
+                  <rect x="10" y="72" width="18" height="18" fill="#000"/>
+                  <!-- QR data dots -->
+                  <rect x="38" y="5" width="5" height="5" fill="#000"/>
+                  <rect x="46" y="5" width="5" height="5" fill="#000"/>
+                  <rect x="54" y="5" width="5" height="5" fill="#000"/>
+                  <rect x="38" y="12" width="5" height="5" fill="#000"/>
+                  <rect x="54" y="12" width="5" height="5" fill="#000"/>
+                  <rect x="5" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="12" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="20" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="5" y="46" width="5" height="5" fill="#000"/>
+                  <rect x="20" y="46" width="5" height="5" fill="#000"/>
+                  <rect x="5" y="54" width="5" height="5" fill="#000"/>
+                  <rect x="12" y="54" width="5" height="5" fill="#000"/>
+                  <rect x="38" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="46" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="54" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="62" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="70" y="38" width="5" height="5" fill="#000"/>
+                  <rect x="38" y="46" width="5" height="5" fill="#000"/>
+                  <rect x="54" y="46" width="5" height="5" fill="#000"/>
+                  <rect x="70" y="46" width="5" height="5" fill="#000"/>
+                  <rect x="38" y="54" width="5" height="5" fill="#000"/>
+                  <rect x="46" y="54" width="5" height="5" fill="#000"/>
+                  <rect x="62" y="54" width="5" height="5" fill="#000"/>
+                  <rect x="38" y="62" width="5" height="5" fill="#000"/>
+                  <rect x="54" y="62" width="5" height="5" fill="#000"/>
+                  <rect x="70" y="62" width="5" height="5" fill="#000"/>
+                  <rect x="46" y="70" width="5" height="5" fill="#000"/>
+                  <rect x="54" y="70" width="5" height="5" fill="#000"/>
+                  <rect x="62" y="70" width="5" height="5" fill="#000"/>
+                  <rect x="38" y="78" width="5" height="5" fill="#000"/>
+                  <rect x="54" y="78" width="5" height="5" fill="#000"/>
+                  <rect x="70" y="78" width="5" height="5" fill="#000"/>
+                  <rect x="78" y="62" width="5" height="5" fill="#000"/>
+                  <rect x="86" y="62" width="5" height="5" fill="#000"/>
+                  <rect x="78" y="70" width="5" height="5" fill="#000"/>
+                  <rect x="86" y="78" width="5" height="5" fill="#000"/>
+                  <!-- PromptPay logo center hint -->
+                  <rect x="42" y="42" width="16" height="16" rx="2" fill="white" stroke="#06C755" stroke-width="1.5"/>
+                  <text x="50" y="53" text-anchor="middle" font-size="8" fill="#06C755" font-weight="bold">PP</text>
+                </svg>
+              </div>
+              <div class="qr-amount">฿1,326.00</div>
+              <div class="qr-sub">สแกนด้วยแอปธนาคารหรือ Mobile Banking</div>
+              <div class="qr-timer">
+                ⏱ QR หมดอายุใน <span id="qrTimer">09:47</span>
+              </div>
+              <div class="qr-copy" onclick="copyAccount()">📋 คัดลอกเลข PromptPay: 096-xxx-xxxx</div>
+              <button class="qr-confirm-btn" onclick="confirmPayment()">
+                ✅ ฉันชำระเงินแล้ว — ยืนยัน
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credit Card -->
+        <div class="payment-tab" id="tabCard">
+          <div class="payment-tab-header" onclick="selectPayment('card')">
+            <input type="radio" name="payment">
+            <span class="payment-tab-label">
+              <strong>บัตรเครดิต / เดบิต</strong>
+              <small style="display:block;font-weight:400;color:#888;">ผ่อน 0% 3 เดือน KBank / SCB</small>
+            </span>
+            <div class="payment-logos">
+              <span class="p-logo">VISA</span>
+              <span class="p-logo">MC</span>
+              <span class="p-logo">JCB</span>
+            </div>
+          </div>
+          <div class="payment-tab-body">
+            <div class="form-group">
+              <label>หมายเลขบัตร</label>
+              <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" id="cardNum" oninput="formatCard(this)">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>วันหมดอายุ</label>
+                <input type="text" placeholder="MM/YY" maxlength="5" id="cardExp">
+              </div>
+              <div class="form-group">
+                <label>CVV</label>
+                <input type="text" placeholder="000" maxlength="3" id="cardCvv">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>ชื่อบนบัตร</label>
+              <input type="text" placeholder="ชื่อภาษาอังกฤษตามบัตร">
+            </div>
+            <div style="background:#e8f5e9;padding:12px 16px;border-radius:6px;font-size:13px;color:#2e7d32;margin-bottom:16px;">
+              💳 ผ่อน 0% นาน 3 เดือน = เพียง <strong>฿442/เดือน</strong> กับ KBank และ SCB
+            </div>
+            <button class="btn btn-black" onclick="confirmPayment()">ยืนยันการชำระเงิน</button>
+          </div>
+        </div>
+
+        <!-- TrueMoney -->
+        <div class="payment-tab" id="tabTruemoney">
+          <div class="payment-tab-header" onclick="selectPayment('truemoney')">
+            <input type="radio" name="payment">
+            <span class="payment-tab-label">
+              <strong>TrueMoney Wallet</strong>
+            </span>
+            <div class="payment-logos">
+              <span class="p-logo" style="background:#ff6600;color:#fff;">TRUE</span>
+            </div>
+          </div>
+          <div class="payment-tab-body">
+            <div class="form-group">
+              <label>หมายเลขโทรศัพท์ที่ผูก TrueMoney</label>
+              <input type="tel" placeholder="0xx-xxx-xxxx">
+            </div>
+            <button class="btn btn-black" onclick="confirmPayment()">ส่ง OTP และชำระเงิน</button>
+          </div>
+        </div>
+
+      </div><!-- /payment-tabs -->
+
+      <div style="text-align:center;margin-top:16px;">
+        <button onclick="goToStep1()" style="font-size:13px;color:#888;text-decoration:underline;cursor:pointer;">← กลับแก้ไขข้อมูล</button>
+      </div>
+    </div>
+
+    <!-- ORDER SUMMARY (step 2) -->
+    <div class="order-summary">
+      <h3>สรุปคำสั่งซื้อ</h3>
+      <div class="order-item">
+        <div class="order-item-img">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&q=80" alt="">
+          <span class="order-item-badge">1</span>
+        </div>
+        <div class="order-item-info">
+          <div class="order-item-name">Human Made Graphic T-Shirt</div>
+          <div class="order-item-variant">Black · M</div>
+        </div>
+        <span class="order-item-price">฿1,236</span>
+      </div>
+      <div class="order-item">
+        <div class="order-item-img">
+          <img src="https://images.unsplash.com/photo-1618517351616-38fb9c5210c6?w=200&q=80" alt="">
+          <span class="order-item-badge">1</span>
+        </div>
+        <div class="order-item-info">
+          <div class="order-item-name">Human Made 6-Panel Cap</div>
+          <div class="order-item-variant">Black · Free Size</div>
+        </div>
+        <span class="order-item-price">฿840</span>
+      </div>
+      <div class="order-totals">
+        <div class="order-row"><span>ยอดรวม</span><span>฿2,076</span></div>
+        <div class="order-row"><span>ส่วนลด</span><span style="color:#2e7d32;">-฿624</span></div>
+        <div class="order-row"><span>ค่าจัดส่ง Kerry</span><span>฿50</span></div>
+        <div class="order-row total"><span>รวมทั้งหมด</span><span>฿1,326</span></div>
+      </div>
+      <div class="secure-badge" style="margin-top:16px;">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        ข้อมูลเข้ารหัส SSL 256-bit
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CONFIRMATION PAGE -->
+<div class="container" id="confirmPage" style="display:none;">
+  <div class="confirmation-page">
+    <div class="confirm-icon">✅</div>
+    <h1>สั่งซื้อสำเร็จแล้ว!</h1>
+    <p style="font-size:16px;color:#111;font-weight:600;">ขอบคุณที่ซื้อสินค้ากับเรา</p>
+    <div class="order-number">#HM-20250506-1847</div>
+    <p>📩 ส่งรายละเอียดไปที่อีเมลของคุณแล้ว</p>
+    <p>📦 ประมาณการส่ง: <strong>7–8 พฤษภาคม 2568</strong> ทาง Kerry Express</p>
+
+    <div style="background:#f5f5f5;border-radius:8px;padding:20px;margin:24px 0;text-align:left;">
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px;"><span>Human Made Graphic T-Shirt (M/Black)</span><span>฿1,236</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px;"><span>Human Made 6-Panel Cap (Black)</span><span>฿840</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:14px;margin-bottom:8px;color:#888;"><span>ค่าจัดส่ง Kerry</span><span>฿50</span></div>
+      <div style="display:flex;justify-content:space-between;font-size:16px;font-weight:700;border-top:1px solid #e0e0e0;padding-top:12px;margin-top:4px;"><span>รวม</span><span>฿1,326</span></div>
+    </div>
+
+    <div class="confirm-actions">
+      <a href="#" class="btn btn-black" style="padding:12px 28px;">📍 ติดตามพัสดุ</a>
+      <a href="#" class="btn btn-line" style="padding:12px 28px;">💬 ทัก LINE</a>
+      <a href="listing.html" class="btn btn-outline" style="width:auto;padding:12px 28px;">ช้อปต่อ →</a>
+    </div>
+
+    <!-- Post-purchase upsell -->
+    <div style="margin-top:48px;text-align:left;">
+      <h3 style="font-size:18px;font-weight:700;margin-bottom:20px;">คุณอาจชอบสินค้าเหล่านี้ด้วย</h3>
+      <div class="product-grid" style="grid-template-columns:repeat(4,1fr);">
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="card-img-wrap">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=400&q=80" alt="">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&q=80" alt="">
+          </div>
+          <div class="card-info"><h3>Human Made Hoodie</h3><div class="card-price"><s>฿2,800</s> <strong>฿1,960</strong></div></div>
+        </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="card-img-wrap">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80" alt="">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=400&q=80" alt="">
+          </div>
+          <div class="card-info"><h3>Wide Leg Pants</h3><div class="card-price"><s>฿3,200</s> <strong>฿2,240</strong></div></div>
+        </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="card-img-wrap">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=400&q=80" alt="">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1594938298603-c8148c4b4c06?w=400&q=80" alt="">
+          </div>
+          <div class="card-info"><h3>Military Jacket</h3><div class="card-price"><s>฿5,500</s> <strong>฿2,365</strong></div></div>
+        </div>
+        <div class="product-card" onclick="window.location='product.html'">
+          <div class="card-img-wrap">
+            <img class="img-primary" src="https://images.unsplash.com/photo-1618517351616-38fb9c5210c6?w=400&q=80" alt="">
+            <img class="img-secondary" src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=400&q=80" alt="">
+          </div>
+          <div class="card-info"><h3>6-Panel Cap</h3><div class="card-price"><s>฿1,200</s> <strong>฿840</strong></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer" style="margin-top:40px;">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">PRELUXE</div>
+      <p>Premium Japanese streetwear<br>ของแท้ · ราคาดี · ส่งเร็ว</p>
+      <div class="payment-icons">
+        <span class="pay-icon">PromptPay</span>
+        <span class="pay-icon">VISA</span>
+        <span class="pay-icon">MC</span>
+        <span class="pay-icon">JCB</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Help</h4>
+      <a href="#">FAQ</a>
+      <a href="#">ติดต่อเรา</a>
+      <a href="#">นโยบายการคืนสินค้า</a>
+    </div>
+    <div class="footer-links">
+      <h4>Legal</h4>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Human Made Thailand. All rights reserved.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

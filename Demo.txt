@@ -1,0 +1,120 @@
+You are a senior UI/UX designer, frontend developer, and conversion strategist.
+
+Your task:
+Create a HIGH-CONVERSION, CLICKABLE DEMO website for a fashion e-commerce system.
+
+IMPORTANT:
+This is NOT a full production system.
+This is a SALES DEMO to impress clients and win the deal.
+
+---
+
+REFERENCE:
+Base the design on a minimal, premium fashion style similar to HUMAN MADE,
+but IMPROVED for conversion and Thai market usage.
+
+---
+
+GOAL:
+Make the client feel:
+"This looks premium, easy to use, and will help me increase sales. I want this."
+
+---
+
+PAGES TO BUILD (CLICKABLE DEMO):
+
+1. HOMEPAGE
+2. PRODUCT LISTING
+3. PRODUCT DETAIL
+4. CHECKOUT (mock)
+
+Navigation between pages must work (no backend needed).
+
+---
+
+DESIGN STYLE:
+
+- Minimal, clean, luxury (white/black tone)
+- Large product images
+- Mobile-first responsive
+- Fast and smooth interactions
+- Premium brand feeling
+
+---
+
+MUST INCLUDE (HIGH-CONVERSION ELEMENTS):
+
+HOMEPAGE:
+- Hero banner with strong message:
+  "Sell even when out of stock"
+- CTA button (Shop Now)
+- Best sellers grid (with hover image switch)
+- Trust indicators (reviews, payment icons)
+- Feature highlights:
+  - PromptPay payment
+  - Pre-order system
+  - Real-time stock
+
+---
+
+PRODUCT LISTING:
+- Product grid
+- Hover image swap
+- Smart badges:
+  - "🔥 Selling Fast"
+  - "⚡ Only 3 left"
+  - "Pre-order available"
+
+---
+
+PRODUCT DETAIL:
+- Image gallery + thumbnails
+- Variant selector (size/color)
+- Stock indicator ("Only X left")
+- Fake reviews (★★★★★)
+- Size guide (popup or section)
+- Big Add to Cart button
+- Sticky Add to Cart (mobile)
+
+---
+
+CHECKOUT (MOCK):
+- Simple 2-step layout
+- Show PromptPay QR (use placeholder image)
+- Show credit card option
+- Minimal form fields
+- Trust message (secure payment)
+
+---
+
+DATA:
+Use mock products (fashion items)
+
+---
+
+TECH:
+- Frontend only (NO backend)
+- Use Next.js OR HTML + Tailwind
+- Clean, modular code
+- Ready to deploy
+
+---
+
+EXTRA (IMPORTANT FOR SALES):
+- Add small persuasive text (e.g. "Only 3 left", "Best seller")
+- Make it feel real, not like a wireframe
+- Focus on simplicity and conversion, NOT complexity
+
+---
+
+OUTPUT FORMAT:
+1. Project structure
+2. Full code (ready to run)
+3. Instructions to run/deploy
+
+---
+
+GOAL REMINDER:
+This demo must help win the client.
+It should feel like a real system that increases sales,
+not just a pretty website.

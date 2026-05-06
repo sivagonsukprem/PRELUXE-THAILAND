@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Human Made Graphic T-Shirt — PRELUXE THAILAND</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  <span>🚀 ส่งฟรีเมื่อซื้อครบ ฿1,500 | ของแท้ 100% | LINE: @preluxe</span>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <div class="logo"><a href="index.html">PRELUXE</a></div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="listing.html">Shop</a>
+      <a href="listing.html">Clothing</a>
+      <a href="listing.html">Accessories</a>
+      <a href="listing.html">Sale</a>
+    </nav>
+    <div class="header-icons">
+      <button class="icon-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <button class="icon-btn">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" onclick="window.location='checkout.html'">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="cart-count" id="cartCount">2</span>
+      </button>
+      <button class="menu-toggle" onclick="toggleMobileMenu()">
+        <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="listing.html">Shop All</a>
+    <a href="listing.html">Clothing</a>
+    <a href="listing.html">Accessories</a>
+    <a href="listing.html">Sale</a>
+  </div>
+</header>
+
+<!-- PRODUCT DETAIL -->
+<div class="container product-detail">
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a> &rsaquo;
+    <a href="listing.html">Clothing</a> &rsaquo;
+    <span>Human Made Graphic T-Shirt</span>
+    <span class="live-signal">
+      <span class="live-dot"></span>
+      248 คนกำลังดูสินค้านี้อยู่
+    </span>
+  </div>
+
+  <!-- Detail Layout -->
+  <div class="detail-layout">
+
+    <!-- LEFT: Image Gallery -->
+    <div class="gallery-wrap">
+      <div class="gallery-main" id="galleryMain">
+        <img id="mainImg" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=80" alt="Human Made T-Shirt">
+      </div>
+      <div class="gallery-thumbs">
+        <div class="thumb active" onclick="switchImage(this, 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=80')">
+          <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&q=80" alt="">
+        </div>
+        <div class="thumb" onclick="switchImage(this, 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=900&q=80')">
+          <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=200&q=80" alt="">
+        </div>
+        <div class="thumb" onclick="switchImage(this, 'https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=900&q=80')">
+          <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=200&q=80" alt="">
+        </div>
+        <div class="thumb" onclick="switchImage(this, 'https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=900&q=80')">
+          <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=200&q=80" alt="">
+        </div>
+        <div class="thumb" onclick="switchImage(this, 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=900&q=80')">
+          <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=200&q=80" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: Product Info -->
+    <div class="product-info">
+      <p class="sold-count">ขายแล้ว <strong>1,203 ชิ้น</strong></p>
+      <h1>Human Made Graphic T-Shirt</h1>
+
+      <div class="product-rating">
+        <span class="stars">⭐⭐⭐⭐⭐</span>
+        <span class="rating-num">4.8</span>
+        <a href="#reviews" class="rating-count">(248 รีวิว)</a>
+      </div>
+
+      <div class="price-row">
+        <span class="price-current">฿1,236</span>
+        <span class="price-original">฿1,648</span>
+        <span class="price-badge">-25%</span>
+      </div>
+      <p class="price-save">💰 ประหยัด ฿412 จากราคาปกติ</p>
+
+      <div class="divider"></div>
+
+      <!-- Color Variant -->
+      <div class="variant-label">สี: <span id="selectedColor">BLACK</span></div>
+      <div class="color-variants">
+        <div class="color-variant active" style="background:#111" title="Black" onclick="selectColor(this,'BLACK','https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=900&q=80')"></div>
+        <div class="color-variant" style="background:#fff;border:2px solid #ddd" title="White" onclick="selectColor(this,'WHITE','https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=900&q=80')"></div>
+        <div class="color-variant" style="background:#8B4513" title="Brown" onclick="selectColor(this,'BROWN','https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=900&q=80')"></div>
+      </div>
+
+      <!-- Size Variant -->
+      <div class="variant-label" style="margin-top:16px;">ขนาด: <span id="selectedSize">—</span> <span class="size-guide-link" onclick="openSizeGuide()">ดูไซส์ไกด์ ?</span></div>
+      <div class="size-variants">
+        <button class="size-variant" onclick="selectSize(this,'XS')">XS</button>
+        <button class="size-variant" onclick="selectSize(this,'S')">S</button>
+        <button class="size-variant active" onclick="selectSize(this,'M')">M</button>
+        <button class="size-variant" onclick="selectSize(this,'L')">L</button>
+        <button class="size-variant" onclick="selectSize(this,'XL')">XL</button>
+        <button class="size-variant sold-out" disabled title="หมด">XXL</button>
+      </div>
+
+      <!-- Stock Indicator -->
+      <div class="stock-indicator">
+        <div class="stock-row">
+          <span class="stock-label">เหลือเพียง 3 ชิ้นเท่านั้น!</span>
+          <span class="stock-people">👁 5 คนมีในตะกร้าตอนนี้</span>
+        </div>
+        <div class="stock-bar"><div class="stock-fill" id="stockFill"></div></div>
+      </div>
+
+      <!-- Qty + Add to Cart -->
+      <div class="qty-row">
+        <span class="qty-label">จำนวน</span>
+        <div class="qty-control">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <input class="qty-num" type="number" id="qtyInput" value="1" min="1" max="3" readonly>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <button class="btn btn-black" id="addCartBtn" onclick="addToCart()">
+        🛒 เพิ่มลงตะกร้า
+      </button>
+      <button class="btn btn-outline" onclick="toggleWishlist(this)">♡ บันทึกไว้ดูทีหลัง</button>
+
+      <!-- Payment Trust -->
+      <div class="payment-trust">
+        <div class="installment-badge">💳 ผ่อน 0% 3 เดือน กับ KBank / SCB</div>
+        <div class="payment-methods">
+          <span class="pay-badge">PromptPay</span>
+          <span class="pay-badge">VISA</span>
+          <span class="pay-badge">Mastercard</span>
+          <span class="pay-badge">JCB</span>
+          <span class="pay-badge">TrueMoney</span>
+        </div>
+      </div>
+
+      <div class="trust-checks">
+        <div class="trust-check">✅ ของแท้ 100% รับประกันทุกชิ้น</div>
+        <div class="trust-check">✅ ส่งภายใน 24 ชั่วโมง หลังชำระเงิน</div>
+        <div class="trust-check">✅ เปลี่ยน/คืนสินค้าได้ใน 14 วัน</div>
+        <div class="trust-check">✅ SSL ปลอดภัยทุกธุรกรรม</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUNDLE OFFER -->
+  <div class="bundle-section">
+    <h4>🛍 ลูกค้ามักซื้อคู่กัน — ประหยัดเพิ่ม ฿300</h4>
+    <div class="bundle-items">
+      <div class="bundle-img"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=200&q=80" alt="T-Shirt"></div>
+      <span class="bundle-plus">+</span>
+      <div class="bundle-img"><img src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=200&q=80" alt="Pants"></div>
+      <div>
+        <div class="bundle-price">รวม <strong>฿3,176</strong> <span class="bundle-save">ประหยัด ฿300</span></div>
+        <div style="font-size:12px;color:#888;margin-top:3px;">T-Shirt + Wide Leg Pants</div>
+      </div>
+    </div>
+    <button class="btn btn-black" style="width:auto;padding:12px 28px;" onclick="addToCart()">+ เพิ่มทั้งคู่ลงตะกร้า</button>
+  </div>
+
+  <!-- TABS -->
+  <div class="product-tabs" id="reviews">
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchTab(this,'tabDesc')">รายละเอียดสินค้า</button>
+      <button class="tab-btn" onclick="switchTab(this,'tabSize')">ไซส์ไกด์</button>
+      <button class="tab-btn" onclick="switchTab(this,'tabReviews')">รีวิว (248) ⭐4.8</button>
+    </div>
+
+    <!-- Tab: Description -->
+    <div class="tab-content active" id="tabDesc">
+      <div style="max-width:680px;font-size:15px;line-height:1.9;color:#333;">
+        <p style="margin-bottom:16px;">เสื้อยืดกราฟิก Human Made คอลเลกชันพิเศษจาก Graphic Artist Verdy x NIGO® ผลิตจากผ้า 100% Cotton Premium Weight ให้ความนุ่มสบาย ระบายอากาศได้ดี เหมาะสำหรับอากาศร้อนชื้นแบบไทย</p>
+        <ul style="padding-left:20px;">
+          <li style="margin-bottom:8px;">ผ้า 100% Cotton 200g/sqm Heavy Weight</li>
+          <li style="margin-bottom:8px;">พิมพ์ลาย Screen Print ด้วยหมึกพิเศษ ไม่ซีดจาง</li>
+          <li style="margin-bottom:8px;">ทรง Oversized Fit แขนสั้น</li>
+          <li style="margin-bottom:8px;">ป้ายแบรนด์แท้ด้านในเสื้อ</li>
+          <li>Made in Japan</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Tab: Size Guide -->
+    <div class="tab-content" id="tabSize">
+      <div style="max-width:560px;">
+        <table class="size-table">
+          <thead>
+            <tr><th>SIZE</th><th>รอบอก (cm)</th><th>ไหล่ (cm)</th><th>ความยาว (cm)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>XS</strong></td><td>84</td><td>40</td><td>66</td></tr>
+            <tr><td><strong>S</strong></td><td>88</td><td>42</td><td>68</td></tr>
+            <tr style="background:#f5f5f5;font-weight:600;"><td><strong>M ← คุณ</strong></td><td>92</td><td>44</td><td>70</td></tr>
+            <tr><td><strong>L</strong></td><td>96</td><td>46</td><td>72</td></tr>
+            <tr><td><strong>XL</strong></td><td>100</td><td>48</td><td>74</td></tr>
+          </tbody>
+        </table>
+        <div class="size-tip">💡 ทรง Oversized — ถ้าใส่รูปแบบ Fitted แนะนำลด 1 size</div>
+        <p style="margin-top:16px;font-size:13px;color:#888;">ไม่แน่ใจเรื่องไซส์? <a href="#" style="color:#111;font-weight:600;text-decoration:underline;">ทัก LINE ถามได้เลย</a></p>
+      </div>
+    </div>
+
+    <!-- Tab: Reviews -->
+    <div class="tab-content" id="tabReviews">
+      <div class="reviews-summary">
+        <div class="big-rating">
+          <div class="big-num">4.8</div>
+          <div class="big-stars">⭐⭐⭐⭐⭐</div>
+          <div class="big-count">248 รีวิว</div>
+        </div>
+        <div style="flex:1;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:12px;width:16px;text-align:right;">5★</span>
+            <div style="flex:1;height:8px;background:#e0e0e0;border-radius:4px;overflow:hidden;"><div style="width:88%;height:100%;background:#f59e0b;border-radius:4px;"></div></div>
+            <span style="font-size:12px;color:#888;width:32px;">88%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:12px;width:16px;text-align:right;">4★</span>
+            <div style="flex:1;height:8px;background:#e0e0e0;border-radius:4px;overflow:hidden;"><div style="width:9%;height:100%;background:#f59e0b;border-radius:4px;"></div></div>
+            <span style="font-size:12px;color:#888;width:32px;">9%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:12px;width:16px;text-align:right;">3★</span>
+            <div style="flex:1;height:8px;background:#e0e0e0;border-radius:4px;overflow:hidden;"><div style="width:2%;height:100%;background:#f59e0b;border-radius:4px;"></div></div>
+            <span style="font-size:12px;color:#888;width:32px;">2%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="font-size:12px;width:16px;text-align:right;">2★</span>
+            <div style="flex:1;height:8px;background:#e0e0e0;border-radius:4px;overflow:hidden;"><div style="width:1%;height:100%;background:#f59e0b;border-radius:4px;"></div></div>
+            <span style="font-size:12px;color:#888;width:32px;">1%</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px;">
+            <span style="font-size:12px;width:16px;text-align:right;">1★</span>
+            <div style="flex:1;height:8px;background:#e0e0e0;border-radius:4px;overflow:hidden;"><div style="width:0%;height:100%;background:#f59e0b;border-radius:4px;"></div></div>
+            <span style="font-size:12px;color:#888;width:32px;">0%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <div>
+            <span class="reviewer-name">ปอ T.</span>
+            <span style="margin-left:8px;font-size:14px;">⭐⭐⭐⭐⭐</span>
+          </div>
+          <span class="review-date">2 วันที่แล้ว · ซื้อ Size M · Black</span>
+        </div>
+        <p>"สวยมากกกก ของแท้ชัวร์เลย ผ้าหนาดีมาก สั่งตอนเที่ยงคืน ได้ของวันรุ่งขึ้นบ่าย PromptPay จ่ายง่ายมาก จะกลับมาซื้ออีกแน่นอน 🔥"</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <div>
+            <span class="reviewer-name">แนน K.</span>
+            <span style="margin-left:8px;font-size:14px;">⭐⭐⭐⭐⭐</span>
+          </div>
+          <span class="review-date">5 วันที่แล้ว · ซื้อ Size S · White</span>
+        </div>
+        <p>"ระบบเว็บดีมาก กรองสินค้าง่าย ชำระง่าย ส่งเร็ว ของได้ครบ ไม่มีอะไรผิดพลาดเลย ประทับใจมากค่า"</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <div>
+            <span class="reviewer-name">มิน S.</span>
+            <span style="margin-left:8px;font-size:14px;">⭐⭐⭐⭐⭐</span>
+          </div>
+          <span class="review-date">1 สัปดาห์ที่แล้ว · ซื้อ Size L · Black</span>
+        </div>
+        <p>"สั่ง Pre-order ไว้ ของมาตรงเวลาที่บอก แพ็กดีมาก มีการ์ดขอบคุณด้วย ประทับใจมากๆ ครับ"</p>
+      </div>
+
+      <div class="review-item">
+        <div class="review-header">
+          <div>
+            <span class="reviewer-name">โอ๊ต P.</span>
+            <span style="margin-left:8px;font-size:14px;">⭐⭐⭐⭐⭐</span>
+          </div>
+          <span class="review-date">2 สัปดาห์ที่แล้ว · ซื้อ Size M · Brown</span>
+        </div>
+        <p>"เป็นร้านแรกที่ซื้อ Human Made แล้วสบายใจจริงๆ ของแท้ ราคาดี มีไซส์ไกด์ให้ดู ไม่เดาสุ่ม แนะนำมากครับ"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RELATED PRODUCTS -->
+  <div style="padding:60px 0 0;">
+    <div class="section-header">
+      <h2 class="section-title" style="margin-bottom:0;">สินค้าที่คุณอาจชอบ</h2>
+      <a href="listing.html" class="see-all">ดูทั้งหมด →</a>
+    </div>
+    <div class="product-grid" style="margin-top:28px;">
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1556821840-3a63f15732ce?w=600&q=80" alt="Hoodie">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=600&q=80" alt="Hoodie alt">
+          <div class="card-badges"><span class="badge badge-new">🆕 ใหม่</span></div>
+          <div class="card-actions"><button class="card-btn" onclick="event.stopPropagation();addToCart()">+ ตะกร้า</button></div>
+        </div>
+        <div class="card-info">
+          <h3>Human Made Heavy Hoodie</h3>
+          <div class="card-price"><s>฿2,800</s> <strong>฿1,960</strong> <span class="disc-badge">-30%</span></div>
+        </div>
+      </div>
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1542272604-787c3835535d?w=600&q=80" alt="Pants">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=600&q=80" alt="Pants alt">
+          <div class="card-badges"><span class="badge badge-preorder">📦 Pre-order</span></div>
+          <div class="card-actions"><button class="card-btn" onclick="event.stopPropagation();addToCart()">+ จอง</button></div>
+        </div>
+        <div class="card-info">
+          <h3>Human Made Wide Leg Pants</h3>
+          <div class="card-price"><s>฿3,200</s> <strong>฿2,240</strong> <span class="disc-badge">-30%</span></div>
+        </div>
+      </div>
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1618517351616-38fb9c5210c6?w=600&q=80" alt="Cap">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=600&q=80" alt="Cap alt">
+          <div class="card-badges"><span class="badge badge-best">⭐ Best Seller</span></div>
+          <div class="card-actions"><button class="card-btn" onclick="event.stopPropagation();addToCart()">+ ตะกร้า</button></div>
+        </div>
+        <div class="card-info">
+          <h3>Human Made 6-Panel Cap</h3>
+          <div class="card-price"><s>฿1,200</s> <strong>฿840</strong> <span class="disc-badge">-30%</span></div>
+        </div>
+      </div>
+      <div class="product-card" onclick="window.location='product.html'">
+        <div class="card-img-wrap">
+          <img class="img-primary" src="https://images.unsplash.com/photo-1551488831-00ddcb6c6bd3?w=600&q=80" alt="Jacket">
+          <img class="img-secondary" src="https://images.unsplash.com/photo-1594938298603-c8148c4b4c06?w=600&q=80" alt="Jacket alt">
+          <div class="card-badges"><span class="badge badge-fire">🔥 ขายดี</span></div>
+          <div class="card-actions"><button class="card-btn" onclick="event.stopPropagation();addToCart()">+ ตะกร้า</button></div>
+        </div>
+        <div class="card-info">
+          <h3>Human Made Military Jacket</h3>
+          <div class="card-price"><s>฿5,500</s> <strong>฿2,365</strong> <span class="disc-badge">-57%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /container -->
+
+<!-- SIZE GUIDE POPUP -->
+<div class="size-popup-overlay" id="sizePopup" onclick="closeSizeGuide(event)">
+  <div class="size-popup">
+    <span class="popup-close" onclick="closeSizeGuide()">✕</span>
+    <h3>ไซส์ไกด์ — T-Shirt</h3>
+    <table class="size-table">
+      <thead>
+        <tr><th>SIZE</th><th>รอบอก (cm)</th><th>ไหล่ (cm)</th><th>ความยาว (cm)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>XS</strong></td><td>84</td><td>40</td><td>66</td></tr>
+        <tr><td><strong>S</strong></td><td>88</td><td>42</td><td>68</td></tr>
+        <tr><td><strong>M</strong></td><td>92</td><td>44</td><td>70</td></tr>
+        <tr><td><strong>L</strong></td><td>96</td><td>46</td><td>72</td></tr>
+        <tr><td><strong>XL</strong></td><td>100</td><td>48</td><td>74</td></tr>
+      </tbody>
+    </table>
+    <div class="size-tip">💡 ทรง Oversized — ถ้าใส่แบบ Fitted แนะนำลด 1 size</div>
+    <div style="display:flex;gap:12px;margin-top:20px;">
+      <a href="#" class="btn btn-black" style="flex:1;padding:12px;">ทัก LINE ถามไซส์</a>
+      <button class="btn btn-outline" style="flex:1;padding:12px;" onclick="closeSizeGuide()">ปิด</button>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY ADD TO CART (Mobile) -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-inner">
+    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=100&q=80" style="width:44px;height:44px;border-radius:4px;object-fit:cover;" alt="">
+    <div class="sticky-product-info">
+      <div class="sticky-product-name">Human Made Graphic T-Shirt</div>
+      <div class="sticky-price">฿1,236 <s style="font-size:11px;color:#999;font-weight:400;">฿1,648</s></div>
+    </div>
+    <button class="sticky-btn" onclick="addToCart()">🛒 ซื้อเลย</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">PRELUXE</div>
+      <p>Premium Japanese streetwear<br>ของแท้ · ราคาดี · ส่งเร็ว</p>
+      <div class="payment-icons">
+        <span class="pay-icon">PromptPay</span>
+        <span class="pay-icon">VISA</span>
+        <span class="pay-icon">MC</span>
+        <span class="pay-icon">JCB</span>
+      </div>
+    </div>
+    <div class="footer-links">
+      <h4>Shop</h4>
+      <a href="listing.html">Clothing</a>
+      <a href="listing.html">Accessories</a>
+      <a href="listing.html">Sale</a>
+    </div>
+    <div class="footer-links">
+      <h4>Help</h4>
+      <a href="#">FAQ</a>
+      <a href="#">ติดต่อเรา</a>
+      <a href="#">นโยบายการคืนสินค้า</a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 Human Made Thailand. All rights reserved.</div>
+</footer>
+
+<div class="toast" id="toast">✅ เพิ่มลงตะกร้าแล้ว!</div>
+
+<script src="app.js"></script>
+</body>
+</html>
